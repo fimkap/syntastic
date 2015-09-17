@@ -1,3 +1,6 @@
+This fork is for Objective C. Changed gcc checker to enable switching to
+analyzer. See my .vimrc for the details.
+TODO: Add a new checker for clang analyzer.
                    ,
                   / \,,_  .'|
                ,{{| /}}}}/_.'            _____________________________________________

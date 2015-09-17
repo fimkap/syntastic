@@ -30,6 +30,7 @@ function! SyntaxCheckers_objc_gcc_IsAvailable() dict
     return executable(expand(g:syntastic_objc_compiler, 1))
 endfunction
 
+"\ 'main_flags': '`< .clang_complete` -fsyntax-only -arch arm64',
 function! SyntaxCheckers_objc_gcc_GetLocList() dict
     return syntastic#c#GetLocList('objc', 'gcc', {
         \ 'errorformat':
@@ -44,7 +45,7 @@ function! SyntaxCheckers_objc_gcc_GetLocList() dict
         \     '%f:%l: %trror: %m,' .
         \     '%f:%l: %tarning: %m,' .
         \     '%f:%l: %m',
-        \ 'main_flags': '-x objective-c -fsyntax-only',
+        \ 'main_flags': '-x objective-c',
         \ 'header_flags': '-x objective-c-header -lobjc',
         \ 'header_names': '\m\.h$' })
 endfunction
